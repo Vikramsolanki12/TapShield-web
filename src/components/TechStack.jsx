@@ -105,15 +105,15 @@ const TechStack = () => {
   ];
 
   const pptSlides = [
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512243/1_try2jv.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512244/2_lk3t1q.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/3_lu3jyd.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/4_oqs6dy.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/5_rtxoln.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/6_khi5pd.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512248/7_tku6bd.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512247/8_ykacy2.jpg",
-   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512246/9_dhcrqd.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512243/1_try2jv.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512244/2_lk3t1q.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/3_lu3jyd.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/4_oqs6dy.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/5_rtxoln.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/6_khi5pd.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512248/7_tku6bd.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512247/8_ykacy2.jpg",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512246/9_dhcrqd.jpg",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -201,28 +201,30 @@ const TechStack = () => {
             />
           </div>
 
-          <div className="flex justify-center gap-4 mt-6 flex-wrap">
+          <div className="flex justify-between gap-2 mt-6 w-full max-w-sm mx-auto">
             <button
               onClick={() =>
                 setCurrentSlide(
                   (currentSlide - 1 + pptSlides.length) % pptSlides.length
                 )
               }
-              className="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-full"
+              className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-full text-sm sm:text-base"
             >
               ◀ Back
             </button>
+
             <button
               onClick={() => setAutoPlay(!autoPlay)}
-              className="bg-purple-600 hover:bg-purple-500 text-white px-5 py-2 rounded-full"
+              className="flex-1 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-full text-sm sm:text-base"
             >
               {autoPlay ? "⏹ Stop" : "▶ Start Auto"}
             </button>
+
             <button
               onClick={() =>
                 setCurrentSlide((currentSlide + 1) % pptSlides.length)
               }
-              className="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-full"
+              className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-full text-sm sm:text-base"
             >
               ▶ Next
             </button>
