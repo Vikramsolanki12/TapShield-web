@@ -1,30 +1,30 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 const futureScopeItems = [
   {
     title: '📍 GPS Integration',
     description: 'Send real-time location to trusted contacts for faster emergency response.',
-    image: 'src/assets/future-gps.png',
+    image: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510962/future-gps_rvxqla.png',
   },
   {
     title: '🔋 Battery Optimization',
     description: 'Enhancing power efficiency for over 5 days standby with smart sleep cycles.',
-    image: 'src/assets/future-battery.png',
+    image: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510965/future-battery_jyjeel.png',
   },
   {
     title: '📱 Companion App',
     description: 'Manage contacts, tap patterns, and view device stats through an easy-to-use app.',
-    image: 'src/assets/future-companion.png',
+    image: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510964/future-companion_qu6msq.png',
   },
   {
     title: '🎙️ Voice Activation',
     description: 'Optional voice-triggered SOS for additional accessibility and safety.',
-    image: 'src/assets/future-voice.png',
+    image: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510965/future-voice_hodcyx.png',
   },
   {
     title: '🌐 Community SOS Network',
     description: 'Connect nearby volunteers via mesh alerts to respond faster in emergencies.',
-    image: 'src/assets/future-community.png',
+    image: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510964/future-community_sfontr.png',
   },
 ];
 
@@ -32,22 +32,6 @@ const tabs = ['Presentation', 'Live Demo', 'Future Scope'];
 
 const LiveDemo = () => {
   const [activeTab, setActiveTab] = useState('Presentation');
-
-  const presentationRef = useRef(null);
-  const demoRef = useRef(null);
-
-  const handleMouseEnter = (videoRef) => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = (videoRef) => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  };
 
   return (
     <section
@@ -89,21 +73,15 @@ const LiveDemo = () => {
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
                 Tap → AI Detection → GSM Trigger → Live Location SMS — all in under 2 seconds.
               </p>
-              <div
-                className="w-full max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden border-2 border-indigo-600 shadow-lg"
-                onMouseEnter={() => handleMouseEnter(demoRef)}
-                onMouseLeave={() => handleMouseLeave(demoRef)}
-              >
-                <video
-                  ref={demoRef}
-                  src="src/assets/video/demo.mp4"
+              <div className="w-full max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden border-2 border-indigo-600 shadow-lg">
+                <iframe
                   className="w-full h-full"
-                  controls
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                />
+                  src="https://www.youtube.com/embed/ucn77c47pr0?si=OAh9lWhtnC3ffc3q"
+                  title="Live Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </>
           )}
@@ -114,21 +92,15 @@ const LiveDemo = () => {
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
                 Watch our team pitch the TapShield journey, tech stack, and mission.
               </p>
-              <div
-                className="w-full max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden border-2 border-indigo-600 shadow-lg"
-                onMouseEnter={() => handleMouseEnter(presentationRef)}
-                onMouseLeave={() => handleMouseLeave(presentationRef)}
-              >
-                <video
-                  ref={presentationRef}
-                  src="src/assets/video/presentation.mp4"
+              <div className="w-full max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden border-2 border-indigo-600 shadow-lg">
+                <iframe
                   className="w-full h-full"
-                  controls
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                />
+                  src="https://www.youtube.com/embed/aPw6EyoiOC8?si=UgyEwkyHXLSqs43x"
+                  title="Team Presentation"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </>
           )}

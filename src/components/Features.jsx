@@ -1,4 +1,3 @@
-// src/components/Features.jsx
 import React, { useEffect, useState } from 'react';
 
 const FeatureCard = ({ title, description, icon }) => (
@@ -13,35 +12,35 @@ const FeatureCard = ({ title, description, icon }) => (
 
 const slides = [
   {
-    src: 'src/assets/gif/img1.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511598/img1_qxu3uz.png',
     caption: '👩‍🦰 She’s in danger. Her silence hides a cry for help.',
   },
   {
-    src: 'src/assets/gif/img2.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511603/img2_mczxuc.png',
     caption: '📩 One tap. One second. A life saved.',
   },
   {
-    src: 'src/assets/gif/img3.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511595/img3_c76dz5.png',
     caption: '👴 Alone. Lost. The elderly feel more than pain — they feel forgotten.',
   },
   {
-    src: 'src/assets/gif/img4.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511604/img4_y5plsb.png',
     caption: '💬 A silent alert speaks louder than words.',
   },
   {
-    src: 'src/assets/gif/img5.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511598/img5_reiaam.png',
     caption: '♿ Some can’t move. Some can’t speak. But they can still call for help.',
   },
   {
-    src: 'src/assets/gif/img6.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511605/img6_fxm6s0.png',
     caption: '💡 Empowered with a tap. Help arrives before it’s too late.',
   },
   {
-    src: 'src/assets/gif/img7.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511600/img7_kpouhb.png',
     caption: '🧒 A child feels fear — but can still reach someone who cares.',
   },
   {
-    src: 'src/assets/gif/img8.png',
+    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511601/img8_csttyq.png',
     caption: '🫂 One tap. One bond. One guardian by their side.',
   },
 ];

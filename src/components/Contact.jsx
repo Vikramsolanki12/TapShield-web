@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React from "react";
 
 const Contact = () => {
@@ -17,16 +16,16 @@ const Contact = () => {
           Get in Touch
         </h2>
         <p className="text-gray-300 text-xl mb-12 max-w-2xl mx-auto animate-slideInUp">
-          Have questions about TapShield, or want to collaborate? Feel free to
-          reach out to us.
+          Have questions about TapShield or want to collaborate? Feel free to reach out to us.
         </p>
-        <div className="bg-[#0f172a] p-10 rounded-xl shadow-xl border border-indigo-700 max-w-lg mx-auto animate-slideInUp animation-delay-300">
+
+        <div className="bg-[#0f172a] p-10 rounded-xl shadow-xl border border-indigo-700 max-w-lg mx-auto animate-slideInUp animation-delay-300 transition-transform hover:scale-105 duration-300">
           <h3 className="text-3xl font-bold text-indigo-400 mb-6">
-            Contact Information
+            📬 Contact Information
           </h3>
           <div className="space-y-4 text-lg text-gray-300">
             <p className="flex items-center justify-center">
-              <span className="text-indigo-500 mr-3 text-2xl">📧</span>
+              <span className="text-indigo-500 mr-3 text-2xl" role="img" aria-label="email">📧</span>
               Email:
               <a
                 href="mailto:runtimeterror1.team@gmail.com"
@@ -36,18 +35,21 @@ const Contact = () => {
               </a>
             </p>
             <p className="flex items-center justify-center">
-              <span className="text-indigo-500 mr-3 text-2xl">📧</span>
-              Youtube:
+              <span className="text-indigo-500 mr-3 text-2xl" role="img" aria-label="youtube">📺</span>
+              YouTube:
               <a
                 href="https://www.youtube.com/@runtimeterror12"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ml-2 text-blue-400 hover:underline"
               >
                 Runtime Terror
               </a>
             </p>
             <p className="flex items-center justify-center">
-              <span className="text-indigo-500 mr-3 text-2xl">📍</span>
-              Team: <span className="ml-2">Runtime Terror</span>
+              <span className="text-indigo-500 mr-3 text-2xl" role="img" aria-label="location">📍</span>
+              Team:
+              <span className="ml-2">Runtime Terror</span>
             </p>
           </div>
         </div>

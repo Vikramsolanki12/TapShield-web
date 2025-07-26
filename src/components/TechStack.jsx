@@ -32,22 +32,26 @@ const TechStack = () => {
   const hardware = [
     {
       name: "Arduino Nano",
-      image: "src/assets/images/arduino_nano.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512560/arduino_nano_vdp28z.png",
       description: "Controls sensors and sends alerts.",
     },
     {
       name: "Piezo Sensor",
-      image: "src/assets/images/piezo.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512563/piezo_dnforn.png",
       description: "Detects tap vibrations.",
     },
     {
       name: "SIM800L GSM Module",
-      image: "src/assets/images/sim800l.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512565/sim800l_nlqpvk.png",
       description: "Sends SMS using GSM network.",
     },
     {
       name: "Vibration Motor",
-      image: "src/assets/images/vibration.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512567/vibration_zqacnn.png",
       description: "Provides haptic feedback.",
     },
   ];
@@ -55,22 +59,26 @@ const TechStack = () => {
   const softwareAI = [
     {
       name: "Edge Impulse",
-      image: "src/assets/images/edge.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512562/edge_rkl7qi.png",
       description: "Trains the ML model for tap recognition.",
     },
     {
       name: "TinyML Inference Code",
-      image: "src/assets/images/tinyml.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512565/tinyml_cyphgd.png",
       description: "Runs the model on Arduino Nano.",
     },
     {
       name: "C++ (Arduino IDE)",
-      image: "src/assets/images/c.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512562/c_fcuuqj.png",
       description: "Controls logic and integrates hardware.",
     },
     {
       name: "Serial Monitor",
-      image: "src/assets/images/serial.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512564/serial_rrsgz8.png",
       description: "Monitors live data from sensors.",
     },
   ];
@@ -78,31 +86,34 @@ const TechStack = () => {
   const powerSystem = [
     {
       name: "Li-ion 3.7V Battery",
-      image: "src/assets/images/ion.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512563/ion_h2pw5w.png",
       description: "Main rechargeable battery source.",
     },
     {
       name: "TP4056 Charging Module",
-      image: "src/assets/images/tp4056.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512566/tp4056_xqsgey.png",
       description: "Used for safe charging.",
     },
     {
       name: "Voltage Regulator (5V)",
-      image: "src/assets/images/buck-converter.png",
+      image:
+        "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512562/buck-converter_akxjlp.png",
       description: "Maintains constant voltage.",
     },
   ];
 
   const pptSlides = [
-    "src/assets/Ml-model-ppt/1.jpg",
-    "src/assets/Ml-model-ppt/2.jpg",
-    "src/assets/Ml-model-ppt/3.jpg",
-    "src/assets/Ml-model-ppt/4.jpg",
-    "src/assets/Ml-model-ppt/5.jpg",
-    "src/assets/Ml-model-ppt/6.jpg",
-    "src/assets/Ml-model-ppt/7.jpg",
-    "src/assets/Ml-model-ppt/8.jpg",
-    "src/assets/Ml-model-ppt/9.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512243/1_try2jv.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512244/2_lk3t1q.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/3_lu3jyd.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/4_oqs6dy.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/5_rtxoln.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512245/6_khi5pd.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512248/7_tku6bd.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512247/8_ykacy2.jpg",
+   "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753512246/9_dhcrqd.jpg",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -136,7 +147,7 @@ const TechStack = () => {
                 Our Product
               </h3>
               <img
-                src="src/assets/prototype.png"
+                src="https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510965/prototype_i4iiuz.png"
                 alt="Prototype"
                 className="w-full max-w-sm md:max-w-full rounded-xl shadow-lg border border-indigo-700 mx-auto"
               />
@@ -148,7 +159,7 @@ const TechStack = () => {
                 Circuit Diagram
               </h3>
               <img
-                src="src/assets/circuit-diagram.png"
+                src="https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510963/circuit-diagram_j201f1.png"
                 alt="Circuit Diagram"
                 className="w-full max-w-sm md:max-w-full rounded-xl shadow-lg border border-indigo-700 mx-auto"
               />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+
+const logo="https://res.cloudinary.com/dfolw8zvb/image/upload/v1753510966/logo_mwviob.png";
 
 const Navbar = ({ navigateTo, currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,6 @@ const Navbar = ({ navigateTo, currentPage }) => {
     setIsOpen(false);
   };
 
-  // Close menu on window resize (e.g., mobile -> desktop)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1280) {

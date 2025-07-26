@@ -43,21 +43,21 @@ const HowItWorks = () => {
 
   // PPT State
   const slideImages = [
-    "src/assets/complete-ppt/1.png",
-    "src/assets/complete-ppt/2.png",
-    "src/assets/complete-ppt/3.png",
-    "src/assets/complete-ppt/4.png",
-    "src/assets/complete-ppt/5.png",
-    "src/assets/complete-ppt/6.png",
-    "src/assets/complete-ppt/7.png",
-    "src/assets/complete-ppt/8.png",
-    "src/assets/complete-ppt/9.png",
-    "src/assets/complete-ppt/10.png",
-    "src/assets/complete-ppt/11.png",
-    "src/assets/complete-ppt/12.png",
-    "src/assets/complete-ppt/13.png",
-    "src/assets/complete-ppt/14.png",
-    "src/assets/complete-ppt/15.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511874/1_cupe9z.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511875/2_rw0ok7.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511878/3_r28vkn.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511877/4_m3l3lb.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511876/5_mwudgv.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511876/6_kydcpr.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511877/7_dol5bd.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511878/8_giq8aa.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511877/9_xut3om.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511879/10_vfrvsk.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511878/11_exi9ix.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511880/12_hdxwg2.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511879/13_lzckwo.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511879/14_bvlpw1.png",
+    "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511880/15_fnpxue.png",
 
   ];
   const [currentSlide, setCurrentSlide] = useState(0);

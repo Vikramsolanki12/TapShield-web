@@ -1,6 +1,4 @@
-// src/components/Home.jsx
 import React from "react";
-import shieldImg from "../assets/shield.png";
 
 const Home = () => {
   return (
