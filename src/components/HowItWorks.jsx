@@ -142,103 +142,99 @@ const HowItWorks = () => {
           </h3>
           <div className="bg-[#0f172a] border border-indigo-700 rounded-xl shadow-lg p-6 overflow-auto text-sm text-gray-200 font-mono max-h-[500px]">
             <pre>
-              {`#include <TapShield_inferencing.h>
+              {`#include <TapShield_inferencing.h>  // TinyML model header
 #include <SoftwareSerial.h>
 
-#define PIEZO_PIN A0
-#define BUFFER_SIZE 100
 
-float signalBuffer[BUFFER_SIZE];
-
-// SIM800L config
+#define PIEZO_SENSOR_PIN A0
 #define SIM_TX 8
 #define SIM_RX 7
+
+
+#define SAMPLE_SIZE 100
+float sensorData[SAMPLE_SIZE];
+
+
 SoftwareSerial sim800(SIM_TX, SIM_RX);
 
-// Edge Impulse signal wrapper
-int getSignalData(size_t offset, size_t length, float *out_ptr) {
-  memcpy(out_ptr, &signalBuffer[offset], length * sizeof(float));
+int captureData(size_t offset, size_t length, float *output) {
+  memcpy(output, &sensorData[offset], length * sizeof(float));
   return 0;
 }
 
 void setup() {
   Serial.begin(9600);
   sim800.begin(9600);
-  pinMode(PIEZO_PIN, INPUT);
-  delay(3000); // Give SIM800L time to initialize
+  pinMode(PIEZO_SENSOR_PIN, INPUT);
+  delay(2000);
 
-  Serial.println("🤖 TapShield ML System Started...");
-  sendSMS("+91XXXXXXXXXX", "apShield armed and ready!"); // Replace with your number
+  Serial.println("🔔 TapShield System Ready");
+  sendSMS("+91XXXXXXXXXX", "TapShield activated and listening.");
 }
 
 void loop() {
-  // Fill signal buffer with analog samples
-  for (int i = 0; i < BUFFER_SIZE; i++) {
-    signalBuffer[i] = analogRead(PIEZO_PIN);
-    delay(10); // Sampling interval
+  for (int i = 0; i < SAMPLE_SIZE; i++) {
+    sensorData[i] = analogRead(PIEZO_SENSOR_PIN);
+    delay(10);
   }
 
-  // Run Edge Impulse inference
   ei_impulse_result_t result;
-  signal_t signal;
-  signal.total_length = BUFFER_SIZE;
-  signal.get_data = &getSignalData;
+  signal_t inputSignal;
+  inputSignal.total_length = SAMPLE_SIZE;
+  inputSignal.get_data = &captureData;
 
-  EI_IMPULSE_ERROR res = run_classifier(&signal, &result, false);
-  if (res != EI_IMPULSE_OK) {
-    Serial.print("Inference failed: ");
-    Serial.println(res);
+  EI_IMPULSE_ERROR inferenceResult = run_classifier(&inputSignal, &result, false);
+  if (inferenceResult != EI_IMPULSE_OK) {
+    Serial.print("Error running inference: ");
+    Serial.println(inferenceResult);
     return;
   }
 
-  // Check predicted label
-  String detectedLabel = "";
-  float highestConfidence = 0.0;
+
+  String classification = "";
+  float confidence = 0.0;
 
   for (size_t i = 0; i < EI_CLASSIFIER_LABEL_COUNT; i++) {
-    float conf = result.classification[i].value;
+    float score = result.classification[i].value;
     Serial.print(result.classification[i].label);
     Serial.print(": ");
-    Serial.println(conf);
+    Serial.println(score);
 
-    if (conf > highestConfidence) {
-      highestConfidence = conf;
-      detectedLabel = result.classification[i].label;
+    if (score > confidence) {
+      confidence = score;
+      classification = result.classification[i].label;
     }
   }
-
-  // Act on top result
-  if (highestConfidence > 0.80) { // You may adjust threshold
-    if (detectedLabel == "one_tap") {
-      sendSMS("+91XXXXXXXXXX", "I am Safe.");
-    } else if (detectedLabel == "two_tap") {
-      sendSMS("+91XXXXXXXXXX", "Please Call Me.");
-    } else if (detectedLabel == "three_tap") {
-      sendSMS("+91XXXXXXXXXX", "EMERGENCY! Need Help Immediately.");
+  if (confidence > 0.80) {
+    if (classification == "one_tap") {
+      sendSMS("+91XXXXXXXXXX", "Status: I am safe. ✔️");
+    } else if (classification == "two_tap") {
+      sendSMS("+91XXXXXXXXXX", "Alert: Please call me. 📞");
+    } else if (classification == "three_tap") {
+      sendSMS("+91XXXXXXXXXX", "⚠️ EMERGENCY! I need help immediately.");
     } else {
-      Serial.println("Unrecognized pattern.");
+      Serial.println("Pattern unrecognized.");
     }
   }
 
-  delay(2000); // Wait between cycles
+  delay(2000);  // Pause before next read
 }
 
-// Function to send SMS using SIM800L
-void sendSMS(String number, String message) {
-  Serial.println("Sending SMS: " + message);
-  sim800.println("AT+CMGF=1"); delay(500);
+void sendSMS(String recipient, String text) {
+  Serial.println("Sending SMS...");
+  sim800.println("AT+CMGF=1");
+  delay(300);
   sim800.print("AT+CMGS=\"");
-  sim800.print(number);
+  sim800.print(recipient);
   sim800.println("\"");
-  delay(500);
-  sim800.print(message);
-  sim800.write(26); // Ctrl+Z
-  delay(5000);
-  Serial.println("✅ SMS Sent");
+  delay(300);
+  sim800.print(text);
+  sim800.write(26); // End SMS with CTRL+Z
+  delay(4000);
+  Serial.println("SMS Sent ✅");
 }
 
-
-}`}
+`}
             </pre>
           </div>
         </div>
