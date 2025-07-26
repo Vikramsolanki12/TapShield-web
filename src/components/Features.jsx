@@ -1,50 +1,53 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const FeatureCard = ({ title, description, icon }) => (
   <div className="bg-[#0f172a] p-8 rounded-xl shadow-md border border-indigo-700 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-2 animate-slideInUp text-white">
     <div className="text-indigo-400 mb-4 text-5xl flex justify-center">
       {icon}
     </div>
-    <h3 className="text-2xl font-bold text-indigo-200 mb-4 text-center">{title}</h3>
+    <h3 className="text-2xl font-bold text-indigo-200 mb-4 text-center">
+      {title}
+    </h3>
     <p className="text-gray-300 text-center">{description}</p>
   </div>
 );
 
 const slides = [
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511598/img1_qxu3uz.png',
-    caption: '👩‍🦰 She’s in danger. Her silence hides a cry for help.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511598/img1_qxu3uz.png",
+    caption: "👩‍🦰 She’s in danger. Her silence hides a cry for help.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511603/img2_mczxuc.png',
-    caption: '📩 One tap. One second. A life saved.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511603/img2_mczxuc.png",
+    caption: "📩 One tap. One second. A life saved.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511595/img3_c76dz5.png',
-    caption: '👴 Alone. Lost. The elderly feel more than pain — they feel forgotten.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511595/img3_c76dz5.png",
+    caption:
+      "👴 Alone. Lost. The elderly feel more than pain — they feel forgotten.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511604/img4_y5plsb.png',
-    caption: '💬 A silent alert speaks louder than words.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511604/img4_y5plsb.png",
+    caption: "💬 A silent alert speaks louder than words.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511598/img5_reiaam.png',
-    caption: '♿ Some can’t move. Some can’t speak. But they can still call for help.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511598/img5_reiaam.png",
+    caption:
+      "♿ Some can’t move. Some can’t speak. But they can still call for help.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511605/img6_fxm6s0.png',
-    caption: '💡 Empowered with a tap. Help arrives before it’s too late.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511605/img6_fxm6s0.png",
+    caption: "💡 Empowered with a tap. Help arrives before it’s too late.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511600/img7_kpouhb.png',
-    caption: '🧒 A child feels fear — but can still reach someone who cares.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511600/img7_kpouhb.png",
+    caption: "🧒 A child feels fear — but can still reach someone who cares.",
   },
   {
-    src: 'https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511601/img8_csttyq.png',
-    caption: '🫂 One tap. One bond. One guardian by their side.',
+    src: "https://res.cloudinary.com/dfolw8zvb/image/upload/v1753511601/img8_csttyq.png",
+    caption: "🫂 One tap. One bond. One guardian by their side.",
   },
 ];
-
 
 const Features = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -58,47 +61,55 @@ const Features = () => {
 
   const innovations = [
     {
-      title: 'On-device AI',
-      description: 'Edge AI with TinyML ensures tap detection works offline without latency.',
-      icon: '🧠',
+      title: "On-device AI",
+      description:
+        "Edge AI with TinyML ensures tap detection works offline without latency.",
+      icon: "🧠",
     },
     {
-      title: 'Tap-to-alert',
-      description: 'No voice, no button — just a secret tap pattern sends help instantly.',
-      icon: '👆',
+      title: "Tap-to-alert",
+      description:
+        "No voice, no button — just a secret tap pattern sends help instantly.",
+      icon: "👆",
     },
     {
-      title: 'Stealthy Vibration Feedback',
-      description: 'Sends a subtle vibration confirmation to the user, keeping action discreet.',
-      icon: '💢',
+      title: "Stealthy Vibration Feedback",
+      description:
+        "Sends a subtle vibration confirmation to the user, keeping action discreet.",
+      icon: "💢",
     },
     {
-      title: 'Instant GSM SMS',
-      description: 'GSM module sends location & help message without needing a smartphone.',
-      icon: '📶',
+      title: "Instant GSM SMS",
+      description:
+        "GSM module sends location & help message without needing a smartphone.",
+      icon: "📶",
     },
   ];
 
   const impacts = [
     {
-      title: 'Women in Danger',
-      description: 'Activates silently in stalking, abuse or assault scenarios.',
-      icon: '♀️',
+      title: "Women in Danger",
+      description:
+        "Activates silently in stalking, abuse or assault scenarios.",
+      icon: "♀️",
     },
     {
-      title: 'Elderly Aid',
-      description: 'Enables silent emergency signals for health episodes or falls.',
-      icon: '👴',
+      title: "Elderly Aid",
+      description:
+        "Enables silent emergency signals for health episodes or falls.",
+      icon: "👴",
     },
     {
-      title: 'Differently Abled Users',
-      description: 'Enables simple, touch-based alerts when speaking or moving is hard.',
-      icon: '♿',
+      title: "Differently Abled Users",
+      description:
+        "Enables simple, touch-based alerts when speaking or moving is hard.",
+      icon: "♿",
     },
     {
-      title: 'Low Connectivity Areas',
-      description: 'No Wi-Fi? No problem. GSM + offline ML works even in remote zones.',
-      icon: '🌄',
+      title: "Low Connectivity Areas",
+      description:
+        "No Wi-Fi? No problem. GSM + offline ML works even in remote zones.",
+      icon: "🌄",
     },
   ];
 
@@ -167,7 +178,7 @@ const Features = () => {
         </div>
 
         {/* ✨ Quote */}
-        <p className="text-center text-indigo-200 text-xl italic mt-16 animate-fadeIn max-w-2xl mx-auto">
+        <p className="text-center text-indigo-200 text-xl italic mt-16 max-w-2xl mx-auto">
           "A single tap can be the difference between silence and survival."
         </p>
       </div>
