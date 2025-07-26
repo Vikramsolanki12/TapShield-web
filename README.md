@@ -1,12 +1,71 @@
-# React + Vite
+# ⚡ TapShield Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**TapShield Web** is the responsive, React-powered front-end for the **TapShield** wearable emergency response system. It serves as the digital companion to the physical device, presenting its capabilities, mission, and technology stack in a modern, accessible format.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Website Features
 
-## Expanding the ESLint configuration
+- 🎯 Showcase of TapShield’s Core Features  
+- 🧠 AI-Powered SOS Tap Detection Workflow  
+- 📱 Embedded YouTube Demo & Team Presentation  
+- 🧩 Interactive Tabbed Sections  
+- 🖼️ Slide Viewer for PPT Deck  
+- 🌘 Dark-Themed, Mobile-First UI  
+- ⚙️ Live Arduino Code Preview with Downloads  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Built With
+
+- ⚛️ [React.js (Vite)](https://vitejs.dev/)
+- 🧪 [Tailwind CSS](https://tailwindcss.com/)
+- 🎞️ YouTube Embed & Local Video Support
+- 📁 Responsive Grid & Flex Layouts
+- ✨ Custom animations using Tailwind plugins
+
+---
+
+## 🚀 Project Structure
+
+```bash
+TapShield-Web/
+├── public/                # Static files (videos, favicon, etc.)
+├── src/
+│   ├── assets/            # Images, logos, PPT slides
+│   ├── components/        # Reusable UI components
+│   ├── App.jsx            # Main app layout
+│   └── main.jsx           # React root rendering
+├── .gitattributes         # Git LFS tracked files
+├── .gitignore
+├── index.html
+├── package.json
+└── README.md
+
+
+## 📂 Includes
+
+- ✅ **Arduino Code Preview Section**
+- ✅ **Downloadable Library ZIP**
+- ✅ **GitHub Link Highlight**
+- ✅ **Custom Step Cards for Workflow**
+- ✅ **Tabbed UI for Demo, Presentation & Future Scope**
+
+---
+
+## 🧠 About TapShield
+
+**TapShield** is a wearable safety device that detects custom tap patterns using **TinyML** and sends instant **GSM alerts** — without requiring internet.  
+Designed for **discreet SOS communication** in unsafe or offline situations.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 💻 Author
+
+Made with ❤️ by [**Vikram Solanki**](https://github.com/Vikramsolanki12)
